@@ -37,8 +37,8 @@ class CategoryRepository extends AbstractRepository
         $categories = $db->query($sqlData);
 
         if (!empty($categories)) {
-            $categories = ArrayHelpers::deletNumericArrayKeys($categories);
-            $categories = ArrayHelpers::indexBy($categories, 'id');
+            $categories = ArrayHelpers::deletNumericKeys($categories);
+            $categories = ArrayHelpers::replaceKeysBy($categories, 'id');
         }
 
         return $categories ?: [];

@@ -10,7 +10,7 @@ class ProductHelper
             return $products;
         }
 
-        $categories = ArrayHelpers::indexBy($categories, 'id');
+        $categories = ArrayHelpers::replaceKeysBy($categories, 'id');
 
         return array_reduce($products, function ($carry, $product) use($categories) {
             $product = (array)$product;

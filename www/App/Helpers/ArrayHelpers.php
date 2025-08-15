@@ -4,7 +4,7 @@ namespace App\Helpers;
 
 class ArrayHelpers
 {
-    public static function indexBy(array $array, string $key): array
+    public static function replaceKeysBy(array $array, string $key): array
     {
         $result = [];
 
@@ -25,7 +25,7 @@ class ArrayHelpers
         return $result;
     }
 
-    public static function deletNumericArrayKeys(array $data): array
+    public static function deletNumericKeys(array $data): array
     {
         if (empty($data)) {
             return $data;
