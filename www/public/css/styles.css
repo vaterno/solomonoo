@@ -1,0 +1,7 @@
+.categoriesFilterList .categoriesFilterList__link:hover {
+    cursor: pointer;
+}
+
+.productsListSortSelect {
+    width: 190px;
+}
