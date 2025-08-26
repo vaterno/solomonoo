@@ -4,7 +4,7 @@ namespace App\Services\Repository;
 
 use App\Models\Product;
 
-class ProductRepository extends AbstractRepository
+class ProductRepository extends AbstractSqlRepository
 {
     public const string TABLE = 'products';
     public const array COLUMNS = [

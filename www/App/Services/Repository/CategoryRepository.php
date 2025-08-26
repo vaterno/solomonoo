@@ -6,7 +6,7 @@ use Lib\Db;
 use App\Models\Category;
 use App\Helpers\ArrayHelpers;
 
-class CategoryRepository extends AbstractRepository
+class CategoryRepository extends AbstractSqlRepository
 {
     public const string TABLE = 'categories';
     public const array COLUMNS = [
@@ -22,6 +22,8 @@ class CategoryRepository extends AbstractRepository
     }
 
     /**
+     * @deprecated Move method realization to more abstract SQL layer.
+     *
      * @throws \Exception
      */
     public static function findAllWithProductCount(): array
