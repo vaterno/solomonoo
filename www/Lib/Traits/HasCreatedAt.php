@@ -2,7 +2,7 @@
 
 namespace Lib\Traits;
 
-trait CreatableTrait
+trait HasCreatedAt
 {
     public string $created_at = '';
 

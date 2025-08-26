@@ -3,11 +3,11 @@
 namespace App\Models;
 
 use Lib\Model;
-use Lib\Traits\CreatableTrait;
+use Lib\Traits\HasCreatedAt;
 
 class Product extends Model
 {
-    use CreatableTrait;
+    use HasCreatedAt;
 
     public function __construct(
         public string $title,

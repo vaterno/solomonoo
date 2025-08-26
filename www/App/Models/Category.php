@@ -3,11 +3,11 @@
 namespace App\Models;
 
 use Lib\Model;
-use Lib\Traits\CreatableTrait;
+use Lib\Traits\HasCreatedAt;
 
 class Category extends Model
 {
-    use CreatableTrait;
+    use HasCreatedAt;
 
     public function __construct(
         public string $title,
@@ -40,21 +40,6 @@ class Category extends Model
     {
         $this->short_description = $shortDescription;
 
-        return $this;
-    }
-
-    public function getCreatedAt(): \DateTimeImmutable
-    {
-        return (new \DateTimeImmutable($this->created_at));
-    }
-
-    public function setCreatedAt(string $createdAt): static
-    {
-        if (strtotime($createdAt) === false) {
-            throw new \Exception('Was passed incorrect date');
-        }
-
-        $this->created_at = $createdAt;
         return $this;
     }
 }
