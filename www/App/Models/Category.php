@@ -4,18 +4,22 @@ namespace App\Models;
 
 use Lib\Model;
 use Lib\Traits\HasCreatedAt;
+use App\Traits\HasShortDescription;
 
 class Category extends Model
 {
     use HasCreatedAt;
+    use HasShortDescription;
 
     public function __construct(
         public string $title,
-        public string $short_description,
+        string $short_description,
         public int|string|null $id = null,
         string $created_at = '',
     ) {
         $this->created_at = $created_at ?? '';
+        $this->short_description = $short_description;
+
         $this->initializeCreatedAt();
     }
 
@@ -27,18 +31,6 @@ class Category extends Model
     public function setTitle(string $title): static
     {
         $this->title = $title;
-
-        return $this;
-    }
-
-    public function getShortDescription(): string
-    {
-        return $this->short_description;
-    }
-
-    public function setShortDescription(string $shortDescription): static
-    {
-        $this->short_description = $shortDescription;
 
         return $this;
     }

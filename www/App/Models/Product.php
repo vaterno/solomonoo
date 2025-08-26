@@ -4,20 +4,24 @@ namespace App\Models;
 
 use Lib\Model;
 use Lib\Traits\HasCreatedAt;
+use App\Traits\HasShortDescription;
 
 class Product extends Model
 {
     use HasCreatedAt;
+    use HasShortDescription;
 
     public function __construct(
         public string $title,
-        public string $short_description,
+        string $short_description,
         public int|string|null $id = null,
         public float $price = 0.0,
         public ?int $category_id = null,
         string $created_at = '',
     ) {
         $this->created_at = $created_at ?? '';
+        $this->short_description = $short_description;
+
         $this->initializeCreatedAt();
     }
 
@@ -40,18 +44,6 @@ class Product extends Model
     public function setPrice(float $price): static
     {
         $this->price = $price;
-
-        return $this;
-    }
-
-    public function getDescription(): string
-    {
-        return $this->short_description;
-    }
-
-    public function setShortDescription(string $shortDescription): static
-    {
-        $this->short_description = $shortDescription;
 
         return $this;
     }
