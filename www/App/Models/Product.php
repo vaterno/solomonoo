@@ -3,20 +3,22 @@
 namespace App\Models;
 
 use Lib\Model;
+use Lib\Traits\CreatableTrait;
 
 class Product extends Model
 {
+    use CreatableTrait;
+
     public function __construct(
         public string $title,
         public string $short_description,
         public int|string|null $id = null,
         public float $price = 0.0,
         public ?int $category_id = null,
-        public string $created_at = '',
+        string $created_at = '',
     ) {
-        if (empty($this->created_at)) {
-            $this->created_at = date('Y-m-d H:i:s');
-        }
+        $this->created_at = $created_at ?? '';
+        $this->initializeCreatedAt();
     }
 
     public function getTitle(): string
@@ -63,21 +65,6 @@ class Product extends Model
     {
         $this->category_id = $categoryId;
 
-        return $this;
-    }
-
-    public function getCreatedAt(): \DateTimeImmutable
-    {
-        return (new \DateTimeImmutable($this->created_at));
-    }
-
-    public function setCreatedAt(string $createdAt): static
-    {
-        if (strtotime($createdAt) === false) {
-            throw new \Exception('Was passed incorrect date');
-        }
-
-        $this->created_at = $createdAt;
         return $this;
     }
 }
