@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const productsListModalEl = document.getElementById('productsListModal');
+    const productsListModalEl = document.querySelector('#productsListModal .modal');
     const productsContainerEl = document.getElementById('productsListRow');
     const urlParams = new URLSearchParams(window.location.search);
     const categoriesFilterListEls = document.querySelectorAll('.categoriesFilterList__link');

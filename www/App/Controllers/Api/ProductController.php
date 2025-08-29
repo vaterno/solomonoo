@@ -53,8 +53,7 @@ class ProductController extends AbstractController
                 );
 
                 if (empty($result['productData'])) {
-                    $result['success'] = false;
-                    $result['message'] = 'Product not found';
+                    throw new \Exception('Product not found');
                 }
             } else {
                 throw new \Exception('Product id not provided');

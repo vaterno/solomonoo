@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6519058e-2e6a-4bf4-a4a7-d09dfe0ab32c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/www/App/Services/Repository/AbstractSqlRepository.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/www/App/Services/Repository/RepositoryInterface.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/www/resources/templates/blocks/modal_dialog.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/App/Services/Repository/AbstractRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/App/Services/Repository/AbstractRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/App/Services/Repository/CategoryRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/App/Services/Repository/CategoryRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/www/App/Services/Repository/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/App/Services/Repository/ProductRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/App/Controllers/Api/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/App/Controllers/Api/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/App/Models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/App/Models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/App/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/App/Models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/App/Traits/HasShortDescription.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/Lib/Traits/HasShortDescription.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/public/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/www/public/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/www/resources/templates/blocks/products_list.php" beforeDir="false" afterPath="$PROJECT_DIR$/www/resources/templates/blocks/products_list.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +77,12 @@
       <workItem from="1755255456954" duration="9000" />
       <workItem from="1755257492361" duration="443000" />
       <workItem from="1755257980450" duration="2250000" />
-      <workItem from="1756194730296" duration="2753000" />
+      <workItem from="1756194730296" duration="4114000" />
+      <workItem from="1756202361269" duration="1472000" />
+      <workItem from="1756203966964" duration="62000" />
+      <workItem from="1756204335104" duration="31000" />
+      <workItem from="1756397715394" duration="2187000" />
+      <workItem from="1756455845950" duration="899000" />
     </task>
     <servers />
   </component>

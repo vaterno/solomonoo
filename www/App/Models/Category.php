@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Lib\Model;
 use Lib\Traits\HasCreatedAt;
-use App\Traits\HasShortDescription;
+use Lib\Traits\HasShortDescription;
 
 class Category extends Model
 {
